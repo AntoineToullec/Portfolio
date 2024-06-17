@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>COMPÉTENCES - Antoine</title>
+    <link rel="stylesheet" type="text/css" href="competences.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+
+    <svg id="antoine-svg" viewBox="0 0 1320 300">
+        <text x="50%" y="10%" dy=".35em" text-anchor="middle">
+            ANTOINE
+        </text>
+    </svg>
+
+    <div class="text-container hidden">
+        <header>
+            <div class="header">
+                <ul class="menu">
+                    <div class="text-elements">
+                        <li><a href="index.html"> HOME </a></li>
+                        <li><a href="competences.html"> COMPÉTENCES </a></li>
+                        <li><a href="liste_projet.html"> PROJETS </a></li>
+                    </div>
+                    <div class="social-menu">
+                        <li><a href="mailto:antoinetoullec9@gmail.com" target="blank"><i
+                                    class="fas fa-envelope"></i></a></li>
+                        <li><a href="https://github.com/AntoineToullec" target="blank"><i class="fab fa-github"></i></a>
+                        </li>
+                        <li><a href="ANTOINE_TOULLEC_CV.pdf" target="blank" download="ANTOINE_TOULLEC_CV"><i
+                                    class="fas fa-download"></i></a></li>
+                    </div>
+                </ul>
+            </div>
+        </header>
+        <main>
+            <div class="vecteur">
+                <img id="vecteur_1" src="vector/vecteur_1.png" alt="Vecteur 1">
+                <img id="vecteur_2" src="vector/vecteur_2.png" alt="Vecteur 2">
+                <img id="vecteur_3" src="vector/vecteur_3.png" alt="Vecteur 3">
+                <img id="vecteur_4" src="vector/vecteur_4.png" alt="Vecteur 4">
+            </div>
+            <div class="vague">
+                <img id="vaguee" src="vector/vague3.png" alt="Vague" draggable="false">
+            </div>
+            <div class="grid-container">
+                <div id="item-0">
+
+                    <a href="liste_projet.html#grid-container">
+                        <p class="txtgrid2"> Réaliser <br> un développement <br> d'application </p>
+                    </a>
+                </div>
+                <div id="item-1">
+                    <a href="liste_projet.html#item-3">
+
+                        <p class="txtgrid1"> Administrer <br> des systèmes informatiques communicants complexes </p>
+                    </a>
+                </div>
+                <div id="item-2">
+                    <p id="competences"> COMPÉTENCES </p>
+                </div>
+                <div id="item-3">
+                    <a href="liste_projet.html#item-4">
+                        <p class="txtgrid3"> Gérer des données de l'information </p>
+                    </a>
+                </div>
+                <div id="item-4">
+                    <a href="liste_projet.html#5">
+
+                        <p class="txtgrid4"> Travailler dans une équipe informatique</p>
+                    </a>
+                </div>
+                <div id="item-5">
+                    <a href="liste_projet.html#item-2">
+
+                        <p class="txtgrid5"> Optimiser des applications informatiques </p>
+                    </a>
+                </div>
+                <div id="item-6">
+                    <a href="liste_projet.html#item-5">
+
+                        <p class="txtgrid6"> Conduite de projet </p>
+                    </a>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="menu_btm">
+
+            </div>
+        </footer>
+    </div>
+
+
+    <div class="gradient-bg hidden">
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <filter id="goo">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8"
+                        result="goo" />
+                    <feBlend in="SourceGraphic" in2="goo" />
+                </filter>
+            </defs>
+        </svg>
+        <div class="gradients-container">
+            <div class="g1"></div>
+            <div class="g2"></div>
+            <div class="g3"></div>
+            <div class="g4"></div>
+            <div class="g5"></div>
+            <div class="interactive"></div>
+        </div>
+    </div>
+
+
+
+</body>
+
+<script>
+    document.querySelector('#antoine-svg text').addEventListener('animationend', () => {
+        document.querySelector('#antoine-svg').remove();
+        document.querySelector('.text-container').classList.remove('hidden');
+        document.querySelector('.gradient-bg').classList.remove('hidden');
+    });
+
+</script>
+
+
+</html>

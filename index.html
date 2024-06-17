@@ -1,16 +1,232 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<html lang="fr">
 
-	<head>
-		<meta charset="utf-8">
-		<meta name="description" content="corse, Bonifacio">
-		<meta name="keywords" content="Plage corse, corse, plage, bonifacio">
-		<title>Bonifacio</title>
-		<link rel="stylesheet" type="text/css" href="style.css">
-	</head>
+<head>
+    <meta charset="UTF-8">
+    <title>ACCUEIL - Antoine</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
 
-    <body>
-        <p>Hello world</p>
-    </body>
+<body>
+
+    <svg id="antoine-svg" viewBox="0 0 1320 300">
+        <text x="50%" y="10%" dy=".35em" text-anchor="middle">
+            ANTOINE
+        </text>
+    </svg>
+
+    <div class="text-container hidden">
+        <header>
+            <div class="header">
+                <ul class="menu">
+                    <div class="text-elements">
+                        <li><a href="index.html"> HOME </a></li>
+                        <li><a href="competences.html"> COMPÉTENCES </a></li>
+                        <li><a href="liste_projet.html"> PROJETS </a></li>
+                    </div>
+                    <div class="social-menu">
+                        <li><a href="mailto:antoinetoullec9@gmail.com" target="blank"><i
+                                    class="fas fa-envelope"></i></a></li>
+                        <li><a href="https://github.com/AntoineToullec" target="blank"><i class="fab fa-github"></i></a>
+                        </li>
+                        <li><a href="ANTOINE_TOULLEC_CV.pdf" target="blank" download="ANTOINE_TOULLEC_CV"><i
+                                    class="fas fa-download"></i></a></li>
+                    </div>
+                </ul>
+            </div>
+        </header>
+        <main>
+            <div class="vecteur">
+                <img id="vecteur_1" src="vector/vecteur_1.png" alt="Vecteur 1">
+                <img id="vecteur_2" src="vector/vecteur_2.png" alt="Vecteur 2">
+                <img id="vecteur_3" src="vector/vecteur_3.png" alt="Vecteur 3">
+                <img id="vecteur_4" src="vector/vecteur_4.png" alt="Vecteur 4">
+            </div>
+            <div class="vague">
+                <img id="vaguee" src="vector/vague3.png" alt="Vague" draggable="false">
+            </div>
+            <div class="top-main">
+                <div class="text">
+                    <p id="top-text">ANTOINE TOULLEC</p>
+                    <p id="bottom-text">Je suis étudiant <br> en <br> BUT Informatique</p>
+                </div>
+                <div class="image">
+                    <img src="photo/Photo_Antoine.png" alt="Photo De Profil">
+                </div>
+            </div>
+            <section id="section03" class="demo">
+                <p id="text_top_tr"> en savoir plus </p>
+                <a href="#savoirplus" target="_self"><span></span></a>
+            </section>
+            <div class="grid-container" id="savoirplus">
+                <div id="item-0">
+                    <div class="text-center-item-0">
+                        <p>Bonjour <br> Je suis</p>
+                    </div>
+                    <div class="slider-box">
+                        <div class="slider" id="slider-0-1">
+                            <p>en première année de BUT informatique à l’IUT de Lannion.</p>
+                        </div>
+                        <div class="slider" id="slider-0-2">
+                            <p>diplomé du baccalauréat général spécialités Maths, Physique-Chime et Anglais avec mention
+                                européene</p>
+                        </div>
+                        <div class="slider" id="slider-0-3">
+                            <p>titulaire du BAFA depuis 2023, expérience très enrichissante au niveau des relations
+                                humaines</p>
+                        </div>
+                        <div class="slider" id="slider-0-4">
+                            <p>auto-entrepreneur, plus précisément Community Manager pour Rocket Baguette.</p>
+                        </div>
+                        <div class="slider-buttons">
+                            <button class="slider-button" data-slide="0">-</button>
+                            <button class="slider-button" data-slide="1">-</button>
+                            <button class="slider-button" data-slide="2">-</button>
+                            <button class="slider-button" data-slide="3">-</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="item-1">
+                    <p id="years">18 ans</p>
+                    <img src="photo/Cake.png" alt="Gateau" id="cake">
+                </div>
+                <div id="item-2">
+                    <div class="text-center-item-2">
+                        <p>RECHERCHE <br> ALTERNANCE <br> EN</p>
+                    </div>
+                    <div class="slider-box">
+                        <div class="slider" id="slider-2-1">
+                            <p> DÉVELOPPEMENT LOGICIEL OU WEB</p>
+                        </div>
+                        <div class="slider" id="slider-2-2">
+                            <p> GESTION DE BASE DE DONNÉES</p>
+                        </div>
+                        <div class="slider-buttons">
+                            <button class="slider-button" data-slide="0">-</button>
+                            <button class="slider-button" data-slide="1">-</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="item-3">
+                    <div id="map"></div>
+                </div>
+                <div id="item-4">
+                    <p id="permis-text">Permis <br> B</p>
+                    <img src="photo/Voiture.png" alt="Voiture" id="voiture-permis">
+                </div>
+                <div id="item-5">
+                    <p id="nom-prenom">ANTOINE <br> TOULLEC</p>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="menu_btm">
+
+            </div>
+        </footer>
+    </div>
+
+
+
+    <div class="gradient-bg hidden">
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <filter id="goo">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8"
+                        result="goo" />
+                    <feBlend in="SourceGraphic" in2="goo" />
+                </filter>
+            </defs>
+        </svg>
+        <div class="gradients-container">
+            <div class="g1"></div>
+            <div class="g2"></div>
+            <div class="g3"></div>
+            <div class="g4"></div>
+            <div class="g5"></div>
+            <div class="interactive"></div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    document.querySelector('#antoine-svg text').addEventListener('animationend', () => {
+        document.querySelector('#antoine-svg').remove();
+        document.querySelector('.text-container').classList.remove('hidden');
+        document.querySelector('.gradient-bg').classList.remove('hidden');
+    });
+
+    let sliders1 = document.querySelectorAll('#item-0 .slider');
+    let buttons1 = document.querySelectorAll('#item-0 .slider-button');
+    let sliders2 = document.querySelectorAll('#item-2 .slider');
+    let buttons2 = document.querySelectorAll('#item-2 .slider-button');
+    let currentSlider1 = 0;
+    let currentSlider2 = 0;
+
+    sliders1[currentSlider1].style.left = "0";
+    buttons1[currentSlider1].classList.add('active');
+    sliders2[currentSlider2].style.left = "0";
+    buttons2[currentSlider2].classList.add('active');
+
+    function changeSlide(sliders, buttons, currentSlider, index) {
+        if (index < sliders.length) { // Vérifier si l'index est valide
+            sliders[currentSlider].style.left = "-100%";
+            buttons[currentSlider].classList.remove('active');
+            currentSlider = index;
+            sliders[currentSlider].style.left = "0";
+            buttons[currentSlider].classList.add('active');
+        }
+        return currentSlider;
+    }
+
+    buttons1.forEach((button, index) => {
+        button.addEventListener('click', () => {
+            console.log('Button clicked');
+            currentSlider1 = changeSlide(sliders1, buttons1, currentSlider1, index);
+            currentSlider2 = changeSlide(sliders2, buttons2, currentSlider2, index % sliders2.length); // Utiliser l'opérateur modulo
+        });
+    });
+
+    // Ajout des écouteurs d'événements pour les boutons du slider 2
+    buttons2.forEach((button, index) => {
+        button.addEventListener('click', () => {
+            console.log('Button clicked');
+            currentSlider2 = changeSlide(sliders2, buttons2, currentSlider2, index);
+            currentSlider1 = changeSlide(sliders1, buttons1, currentSlider1, index % sliders1.length); // Utiliser l'opérateur modulo
+        });
+    });
+
+    setInterval(() => {
+        currentSlider1 = changeSlide(sliders1, buttons1, currentSlider1, (currentSlider1 + 1) % sliders1.length);
+        currentSlider2 = changeSlide(sliders2, buttons2, currentSlider2, (currentSlider2 + 1) % sliders2.length);
+    }, 6000); // Changez le slider toutes les 6 secondes
+
+</script>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<script>
+
+    var map = L.map('map', {
+        fullscreenControl: true,
+    }).setView([48.3904, -4.4861], 13);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+    }).addTo(map);
+
+    L.marker([48.583328, -3.83333]).addTo(map)
+        .bindPopup('Morlaix')
+        .openPopup();
+
+    L.marker([48.733333, -3.466667]).addTo(map)
+        .bindPopup('Lannion')
+        .openPopup();
+</script>
+
 
 </html>
